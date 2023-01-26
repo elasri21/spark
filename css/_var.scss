@@ -1,0 +1,42 @@
+// colors
+$white: #fff;
+$main-c: #2ED06E;
+$title-c: #081828;
+$main-bg: #F4F7FA;
+$btn-bg: #F7FDF9;
+$border-c: #eee;
+$text-c: #727272;
+$submit-bg: #495560;
+$thik-b: #2A3844;
+$field-bg: #263442;
+
+// familt
+$family: 'DM Sans', sans-serif;
+
+//animation
+@keyframes waves {
+    0% {
+        outline-color: rgba($main-c, .8);
+        outline-offset: 1px;
+    }
+    20% {
+        outline-color: rgba($main-c, .7);
+        outline-offset: 3px;
+    }
+    40% {
+        outline-color: rgba($main-c, .5);
+        outline-offset: 6px;
+    }
+    60% {
+        outline-color: rgba($main-c, .3);
+        outline-offset: 9px;
+    }
+    80% {
+        outline-color: rgba($main-c, .1);
+        outline-offset: 12px;
+    }
+    100% {
+        outline-color: rgba($main-c, .001);
+        outline-offset: 15px;
+    }
+}

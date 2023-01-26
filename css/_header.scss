@@ -1,0 +1,173 @@
+//header
+header {
+    background-color: $main-c;
+    position: fixed;
+    height: 67px;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1111;
+    .container {
+        padding: 10px 0;
+        gap: 20px;
+        position: relative;
+        .logo {
+            a {
+                gap: 5px;
+                font-size: 35px;
+                letter-spacing: -1px;
+                font-weight: 600;
+                color: $white;
+                text-transform: capitalize;
+                span {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    background-color: $white;
+                    transition: .3s;
+                    i {
+                        font-size: 20px;
+                        color: $main-c;
+                        transition: .3s;
+                    }
+                }
+            }
+        }
+        nav {
+            @media (min-width: 922px) {
+                display: block !important;
+                ul {
+                    align-items: center;
+                }
+            }
+            @media (max-width: 921px) {
+                display: none;
+                position: absolute;
+                top: 67px;
+                left: 0;
+                width: 100%;
+                background-color: $white;
+                padding: 20px 30px;
+                border-radius: 6px;
+                box-shadow: 5px 5px 5px $border-c;
+                ul {
+                    flex-direction: column;
+                    li {
+                        a {
+                            color: $title-c !important;
+                            &:hover {
+                                color: $main-c !important;
+                            }
+                        }
+                    }
+                }
+            }
+            ul {
+                display: flex;
+                gap: 20px;
+                li {
+                    a {
+                        font-size: 16px;
+                        text-transform: capitalize;
+                        font-weight: 500;
+                        color: $white;
+                        &:hover {
+                            color: $title-c;
+                        }
+                    }
+                }
+            }
+        }
+        .try {
+            &:hover {
+                background-color: $btn-bg;
+                color: $main-c;
+            }
+            @media (max-width: 921px) {
+                margin-left: auto;
+            }
+        }
+        .toggle-menu {
+            @media (min-width: 922px) {
+                display: none !important;
+            }
+            display: block;
+            width: 30px;
+            height: 25px;
+            cursor: pointer;
+            position: relative;
+            .bar {
+                width: 30px;
+                height: 2px;
+                background-color: $white;
+                position: absolute;
+                left: 0;
+                transition: .3s;
+                &.bar-1 {
+                    top: 5px;
+                }
+                &.bar-2 {
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+                &.bar-3 {
+                    bottom: 5px;
+                }
+            }
+            &.clicked {
+                .bar-2 {
+                    opacity: 0;
+                }
+                .bar-1 {
+                    top: 10px;
+                    transform: rotate(45deg);
+                }
+                .bar-3 {
+                    bottom: 13px;
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+    }
+    &.scrolled {
+        background-color: $white;
+        border-bottom: 1px solid $border-c;
+        .container {
+            .logo {
+                a {
+                    color: $main-c;
+                    span {
+                        background-color:$main-c;
+                        i {
+                            color: $white;
+                        }
+                    }
+                }
+            }
+            nav {
+                ul {
+                    li {
+                        a {
+                            color: $title-c;
+                            &:hover {
+                                color: $main-c;
+                            }
+                        }
+                    }
+                }
+            }
+            .try {
+                background-color: $main-c;
+                &:hover {
+                    background-color: $title-c;
+                    color: $white;
+                }
+            }
+            .toggle-menu {
+                .bar {
+                    background-color: $title-c;
+                }
+            }
+        }
+    }
+}

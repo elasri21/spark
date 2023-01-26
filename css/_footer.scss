@@ -1,0 +1,194 @@
+footer {
+    padding: 60px 0 30px 0;
+    background-color: $title-c;
+    .container {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 30px;
+        flex-wrap: wrap;
+        .with-logo {
+            .logo {
+                a {
+                    gap: 5px;
+                    font-size: 35px;
+                    letter-spacing: -1px;
+                    font-weight: 600;
+                    color: $white;
+                    text-transform: capitalize;
+                    span {
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                        background-color: $white;
+                        transition: .3s;
+                        i {
+                            font-size: 20px;
+                            color: $title-c;
+                            transition: .3s;
+                        }
+                    }
+                }
+            }
+            p {
+                color: $white;
+                max-width: 300px;
+                margin: 20px 0;
+            }
+            h3 {
+                font-size: 20px;
+                color: $white;
+                font-weight: 400;
+                margin-bottom: 20px;
+            }
+            .social  {
+                gap: 5px;
+                a {
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    border: 1px solid $title-c;
+                    i {
+                        font-size: 16px;
+                        color: $white;
+                        transition: .3s;
+                    }
+                    &:hover {
+                        border-color: $main-c;
+                        i {
+                            color: $main-c;
+                        }
+                    }
+                }
+            }
+        }
+        .useful-links {
+            h3 {
+                color: $white;
+                margin-bottom: 20px;
+            }
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                li {
+                    a {
+                        display: block;
+                        width: fit-content;
+                        color: $white;
+                        text-transform: capitalize;
+                        font-size: 16px;
+                        font-weight: 400;
+                        position: relative;
+                        &::before {
+                            content: "";
+                            width: 0;
+                            height: 1px;
+                            background-color: $main-c;
+                            position: absolute;
+                            left: 0;
+                            top: 100%;
+                            transition: .3s;
+                        }
+                        &:hover {
+                            color: $main-c;
+                            &::before {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+            p {
+                color: $white;
+                max-width: 300px;
+                margin-bottom: 20px;
+            }
+            form {
+                position: relative;
+                input {
+                    display: block;
+                    width: 100%;
+                    padding: 15px 20px;
+                    background-color: $field-bg;
+                    border: 1px solid $field-bg;
+                    border-radius: 6px;
+                    caret-color: $main-c;
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: $white;
+                    &::placeholder {
+                        font-size: 16px;
+                        font-weight: 400;
+                        color: $text-c;
+                        transition: .3s;
+                        opacity: .8;
+                    }
+                    &:focus {
+                        border-color: $main-c;
+                        &::placeholder {
+                            opacity: 0;
+                        }
+                        & + button {
+                            background-color: $main-c;
+                            border-color: $main-c;
+                        }
+                    }
+                }
+                button {
+                    border: none;
+                    outline: none;
+                    cursor: pointer;
+                    padding: 15px 20px;
+                    border: 1px solid $submit-bg;
+                    background-color: $submit-bg;
+                    position: absolute;
+                    transition: .3s;
+                    bottom: 0;
+                    top: 0;
+                    right: 0;
+                    border-radius: 0 6px 6px 0;
+                    i {
+                        font-size: 16px;
+                        color: $white;
+                    }
+                }
+            }
+        }
+        .copy {
+            padding: 30px 0 0 0;
+            border-top: 1px solid $text-c;
+            width: 100%;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 400;
+            color: $white;
+            text-transform: capitalize;
+            a {
+                text-transform: lowercase;
+                font-size: 18px;
+                font-weight: 600;
+                color: $btn-bg;
+                &:hover {
+                    color: $main-c;
+                }
+            }
+        }
+        .go-up {
+            width: 45px;
+            height: 45px;
+            border-radius: 3px;
+            background-color: $main-c;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            opacity: 0;
+            i {
+                color: $white;
+            }
+            &:hover {
+                background-color: $title-c;
+            }
+        }
+    }
+}

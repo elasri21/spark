@@ -1,0 +1,110 @@
+/* globalrules*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: $white;
+    font-family: $family;
+}
+section {
+    padding: 60px 0;
+}
+.container {
+    @media (min-width: 1200px) {
+        margin: 0 100px !important;
+    }
+    @media (min-width: 922px) and (max-width: 1199px) {
+        margin: 0 60px !important;
+    }
+    @media (min-width: 768px) and (max-width: 921px) {
+        margin: 0 60px !important;
+    }
+    margin: 0 20px;
+}
+.pattern {
+    @media (max-width: 500px) {
+        h2 {
+            font-size: 30px !important;
+        }
+    }
+    margin-bottom: 30px;
+    span {
+        display: block;
+        font-size: 16px;
+        font-weight: 400;
+        color: $main-c;
+        text-transform: capitalize;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+    h2 {
+        font-size: 44px;
+        font-weight: 600;
+        color: $title-c;
+        text-transform: capitalize;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+    p {
+        max-width: 700px;
+        text-align: center;
+        margin: 0 auto;
+    }
+}
+h3 {
+    font-size: 22px;
+    font-weight: 600;
+    color: $title-c;
+    text-transform: capitalize;
+}
+p {
+    font-size: 16px;
+    font-weight: 400;
+    color: $text-c;
+    line-height: 1.6;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    transition: .3s;
+}
+input, textarea {
+    border: none;
+    outline: none;
+    background: none;
+    transition: .3s;
+}
+.btw-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.align-c {
+    display: flex;
+    align-items: center;
+}
+.c-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.flex-s {
+    display: flex;
+    align-items: flex-start;
+}
+.grid-250 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+.grid-300 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+/* globalrules*/
